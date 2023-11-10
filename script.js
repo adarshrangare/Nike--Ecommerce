@@ -124,3 +124,36 @@ const products = [
   })
 
   
+  console.log(products)
+
+ function renderProductsOnHome(){
+
+    const productSection = document.querySelector(".productSection");
+
+    products.forEach((product)=>{
+
+        const {title,price, colors:[{img}]} = product;
+        console.log(product)
+        productSection.innerHTML += `<div class="productContainerMain">
+        <div class="subProductContainer">
+            <img src="${img}" alt="${title}" class="productImage">
+            <div class="textArea">
+                <div class="productTitle">${title}</div>
+                <div class="productPrice">₹${price}</div>
+            </div>
+        </div>
+        
+        
+            <button class="addToCart"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+        
+
+    </div>`
+
+
+    })
+
+
+
+ } 
+
+ renderProductsOnHome()

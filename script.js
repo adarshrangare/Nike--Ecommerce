@@ -1,3 +1,6 @@
+// Cursor
+
+
 
 const products = [
     {
@@ -157,3 +160,25 @@ const products = [
  } 
 
  renderProductsOnHome()
+
+
+
+ let timelineOg = gsap.timeline();
+    timelineOg.from(".gallery",{
+        y:-50,
+        opacity:0,
+        duration:1,
+        markers:true,
+    })
+
+    timelineOg.from(".galleryItem .galleryTitle ",{
+
+        y:100,
+        opacity:0,
+        duration:0.5,
+    })
+
+
+    // Responsive
+
+    
